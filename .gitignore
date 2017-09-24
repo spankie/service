@@ -7,6 +7,6 @@ tmp/
 node_modules/
 .sass-cache/
 *-packr.go
-public/assets/
+*-bundle.js
 service
 .vscode/
