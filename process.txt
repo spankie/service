@@ -1,0 +1,15 @@
+1. buffalo new service
+2. add repo remote
+3. push to master
+4. didn't touch database.yml file; it was in good condition. :)
+5. ran: buffalo db create -a
+6. ran: buffalo dev (for the first time)
+// ran into some errors:
+    - database not found
+    - didn't run npm install (Using npm instead of yarn)
+
+7. Found out npm had already ran wen buffalo created the application.
+8. ran: buffalo db create -a (again)
+    -- https://www.postgresql.org/message-id/a1a18525-6b24-411d-860c-404878c73e97%40k4g2000yqb.googlegroups.com (This helped)
+// finnally got it working, submitted a pull request to markbates/pop
+
