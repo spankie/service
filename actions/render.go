@@ -10,10 +10,11 @@ var r *render.Engine
 func init() {
 	r = render.New(render.Options{
 		// HTML layout to be used for all HTML requests:
-		HTMLLayout: "application.html",
+		// HTMLLayout: "application.html",
 
 		// Box containing all of the templates:
-		TemplatesBox: packr.NewBox("../templates"),
+		// TemplatesBox: packr.NewBox("../templates"),
+		TemplatesBox: packr.NewBox("../public"),
 
 		// Add template helpers here:
 		Helpers: render.Helpers{},

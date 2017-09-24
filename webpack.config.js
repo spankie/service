@@ -3,13 +3,11 @@ var CopyWebpackPlugin = require('copy-webpack-plugin');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
-  entry: [
-      "./assets/js/application.js",
-      "./node_modules/jquery-ujs/src/rails.js",
-      "./assets/css/application.scss"
-  ],
+  entry: {
+      home: "./public/home/index.js"
+  },
   output: {
-    filename: "application.js",
+    filename: "js/[name]-bundle.js",
     path: __dirname + "/public/assets"
   },
   plugins: [
@@ -44,6 +42,11 @@ module.exports = {
     })
   ],
   module: {
+    // loaders: [{
+    //     test: /\.js$/,
+    //     exclude: /node_modules/,
+    //     loader: 'babel-loader'
+    // }],
     rules: [{
       test: /\.jsx?$/,
       loader: "babel-loader",
